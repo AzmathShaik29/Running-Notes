@@ -1,0 +1,122 @@
+1. Create a GitHub Account through website and create a repository.
+2. Create a folder in our local machine and open the vscode from that directory.
+3. copy the link of our repository and clone it into our local repository
+git clone <https://>
+4. Update the README.md file by writing something and create a file in the same directory in local machine.
+git status
+git add .
+git commit -m <"add some message here">
+git push origin main (if you are doing this for the first time then you need to confirm)
+5. Now refresh the GitHub account to see the changes.
+
+Q. How to know the specific folder created in our local machine is a git repository?
+
+git init
+
+With the above command we can see the .git folder, which git understands it's a git repository
+
+6. Create a repo in GitHub(remote) and push it to the local machine
+
+git remote add origin <https://> (link of the created repo)
+
+Q. How to check the remote operation has done successfully?
+
+git remote -v
+
+Q. How to change the branch name?
+
+git branch -M <branch name>
+
+Q. What is the command to enter when we are pushing the code on same project without entering "origin main"
+
+git push -u origin main
+
+# From next time just enter "git push"
+
+Q. What is the command to create a new branch?
+
+git checkout -b <branch name>
+
+Q. How to change from one branch to another branch?
+
+git checkout <branch name>
+
+Q. What is the command to delete any specific branch?
+
+git branch -d <branch name>
+
+** We cannot delete the branch we are there/working/present, we should come to another branch/master branch then check which branch you want to delete
+
+Q How to push the other branch code to main branch?
+
+way 1
+Q. What is the command to check the difference between two branches?
+
+git diff <branch name>
+
+git merge <branch name>
+
+way 2
+Create PR (Pull Request) from GitHub
+
+click on "Compare & pull request" from GitHub
+
+check if there are any conflicts
+
+Q. How get the changes done in remote?
+
+git pull origin main
+
+Q. How to resolve the merge conflicts?
+
+git merge <branch name> we should give other branch name
+
+Then you will get a message that Git is unable to resolve difference in code between two commits. So, we should keep both the files and save
+git add .
+git commit -m <message>
+git checkout main
+
+Here you won't be able to see the changes, if you need other branch merge into main branch then use below command
+Go to main branch and hit below command
+
+git merge <branch name>
+
+Q. How to undo changes
+Method 1
+
+git reset <filename> #for single file
+git reset # for multiple file names
+
+Q. How to undo changes for one commit back
+Method 2
+
+git reset HEAD~1
+
+Q. How to undo changes for many commits (like first commit we did)
+Method 3
+
+git reset <commit hash/commit id>
+
+Q. How to undo changes from local machine/GitHub
+
+git reset --hard <commit hash/commit id>
+
+With the above command, you go back to the first commit you have done.
+
+Q. What is the command to check all the commits?
+
+git log
+
+Q. How to copy others code to our GitHub account?
+
+We should use FORK option which is available in project (GitHub)
+
+Q. What is the diff between centralized and distributed version control system?
+
+Centralized
+A single copy of the codebase is stored in a central location, and developers commit their changes to that copy.
+
+Distributed
+Each developer has a local copy of the codebase, including its full history, on their own computer.
+
+https://github.com/iam-veeramalla/terraform-zero-to-hero/tree/main
