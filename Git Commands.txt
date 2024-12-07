@@ -9,6 +9,15 @@ git commit -m <"add some message here">
 git push origin main (if you are doing this for the first time then you need to confirm)
 5. Now refresh the GitHub account to see the changes.
 
+Q. How to push the code from VS Code to GitHub Account?
+
+	-	First create the folder in local machine and create files
+	-	Then initialize the git
+	-	git init, git add . , git commit, git status
+	-	Create a Repository in GitHub and copy the link
+	-	git remote add origin <GitHub Link>
+	-	git push -u origin master
+
 Q. How to know the specific folder created in our local machine is a git repository?
 
 git init
